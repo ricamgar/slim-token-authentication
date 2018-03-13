@@ -63,11 +63,12 @@ class TokenAuthentication
 
         try {
 
-            if ($this->options['authenticator']($request, $this) === false) {
+            $result = $this->options['authenticator']($request, $this);
+            if ($result === false) {
                 return $this->error($request, $response);
             }
 
-            return $next($request, $response);
+            return $next($request->withAttribute('userId', $result), $response);
 
         } catch (UnauthorizedExceptionInterface $e) {
             $this->setResponseMessage($e->getMessage());
