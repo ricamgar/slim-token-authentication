@@ -1,8 +1,6 @@
 <?php
 
-namespace app;
-
-use Slim\Middleware\TokenAuthentication\UnauthorizedExceptionInterface;
+namespace Slim\Middleware\TokenAuthentication;
 
 class UnauthorizedException extends \Exception implements UnauthorizedExceptionInterface
 {

@@ -1,5 +1,5 @@
 {
-  "name": "dyorg/slim-token-authentication",
+  "name": "richi/slim-token-authentication",
   "description": "Slim 3.0+ Token Authentication Middleware",
   "keywords": [
     "slim",
